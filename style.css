@@ -1,0 +1,1165 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  color: rgb(218, 218, 218);
+  scroll-behavior: smooth;
+   transition: all 0.3s ease-in-out;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+
+ /* <!-- navbar  --> */
+
+
+.navbar {
+  padding: 0 150px 0 150px;
+  background-color: black;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* backdrop-filter: blur(100px); */
+  font-size: large;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.navbar #open{
+    display: none;
+}
+
+.navbar #close{
+    display: none;
+}
+
+
+.navbar .logo {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.navbar span i {
+  color: rgba(255, 217, 0, 0.778);
+  font-size: 25px;
+}
+.navbar ul {
+  display: flex;
+  gap: 50px;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: rgba(209, 208, 208, 0.908);
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 217, 0, 0.934);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+.navbar ul li a:hover {
+  color: white;
+}
+
+/*  <!-- mainsection includes about me  --> */
+
+
+.mainsection {
+  /* border: 2px solid white; */
+  height: 100vh;
+  /* margin-top: 150px; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+.mainsection .myself {
+  height: 400px;
+  width: 450px;
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainsection .myself p {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.mainsection .myself span {
+  color: gold;
+}
+.mainsection .myself button {
+  color: gold;
+  height: 40px;
+  width: 150px;
+  border-radius: 30px;
+  background-color: transparent;
+  /* border: 1px solid white; */
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  font-size: medium;
+  border: 1.5px solid white;
+}
+.mainsection .myself button:hover {
+  background-color: gold;
+  color: black;
+  transform: translateY(-5px);
+}
+.mainsection .myself a{
+  width: 0%;
+}
+
+@keyframes picanimation {
+
+  from{
+      transform: translateY(-10px); 
+  }
+   to{
+      transform: translateY(10px);
+  }
+  
+}
+
+
+
+.mainsection .devpic {
+  height: 400px;
+  width: 400px;
+  /* border: 2px solid white; */
+  animation: picanimation 2s linear infinite;
+  animation-direction: alternate;
+}
+
+
+
+
+
+
+
+
+/*  <!-- my skill section --> */
+
+.skillsection {
+  height: auto;
+  width: 100%;
+  /* background-color: rgb(55, 54, 55); */
+  /* overflow: hidden; */
+}
+
+.skillsection .skillsheading {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.skillsection .skillbox {
+  height: 250px;
+  width: 100%;
+  /* background-color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.skillsection .skillbox .skill1 {
+  display: flex;
+  height: 70px;
+  width: 300px;
+  background-color: rgb(100, 107, 47);
+  border-radius: 50px;
+  padding-left: 30px;
+  align-items: center;
+}
+.skillsection .skillbox .skill1 p {
+  font-size: smaller;
+}
+.skillsection .skillbox .skill1 .language {
+  padding-left: 10px;
+}
+
+
+/* <!-- my project section --> */
+
+.myprojectsection {
+  height: auto;
+  width: 100%;
+  /* background-color: rgb(87, 90, 95); */
+  margin-top: 100px;
+}
+
+.myprojectsection .projects {
+  text-align: center;
+  padding-top: 60px;
+}
+.myprojectsection .allprojects {
+  height: auto;
+  width: 100%;
+  /* background-color: lightcoral; */
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.myprojectsection .allprojects .projectbox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.myprojectsection .allprojects .projectbox img {
+  border-radius: 20px;
+  height: 310px;
+  width: 300px;
+  background-size: cover;
+  display: block;
+  transition: all ease 0.5s;
+}
+.myprojectsection .allprojects .projectbox .projectinfo {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgb(225, 192, 0));
+  border-radius: 20px;
+  overflow: hidden;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  font-size: 14px;
+  transition: all ease 0.5s;
+}
+.myprojectsection .allprojects .projectbox .projectinfo p {
+  text-align: center;
+  font-size: small;
+  margin-bottom: 20px;
+  color: #000000d7;
+}
+.myprojectsection .allprojects .projectbox .projectinfo h3 {
+  font-weight: 600;
+  color: #000000dc;
+  margin-bottom: 20px;
+}
+.myprojectsection .allprojects .projectbox .projectinfo a {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.myprojectsection .allprojects .projectbox:hover img{
+    transform: scale(1.1);
+    overflow: hidden;
+}
+
+.myprojectsection .allprojects .projectbox:hover .projectinfo{
+    height: 100%;
+}
+
+
+/* <!-- contact section --> */
+
+.contactsection {
+  height: auto;
+  width: 100%;
+  /* background-color: mediumslateblue; */
+}
+.contactsection .contactheading {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+.contactsection .mycontactinfo {
+  height: 500px;
+  width: 100%;
+  /* background-color: teal; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactsection .mycontactinfo .myinfo {
+  height: 400px;
+  width: 400px;
+  /* background-color: darkgoldenrod; */
+}
+
+.myinfo h2{
+  font-weight: bold;
+  font-size: 2rem;
+}
+.contactsection .mycontactinfo .myinfo .info{
+  padding-top: 20px;
+  height: auto;
+  /* background-color: floralwhite; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactsection .mycontactinfo .myinfo .info .links{
+  height: 60px;
+  width: 100%;
+  /* background-color: black;   */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 20px;
+  cursor: pointer ;
+}
+.links i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a79721bf;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+}
+.links i:hover{
+  transform: translateY(-10px);
+}
+.links a {
+  text-decoration: none;
+}
+.links .email h4{
+  font-size: medium;
+  color: #c0c0c0;
+  font-weight: 200;
+}
+
+
+.contactsection .mycontactinfo .contactme {
+  height: 480px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.237);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: 1px solid wheat;
+}
+
+.contactform{
+height: 450px;
+  width:350px;
+  /* background-color: #740c0c; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  gap: 5px;
+}
+
+.contactform input{
+  color: black;
+  /* background: transparent; */
+  border: 1px solid white;
+  padding-left: 10px;
+  height: 50px;
+  border-radius: 30px;
+}
+.contactform textarea{
+  height: 200px;
+  color: black;
+  padding: 10px;
+  /* background: transparent; */
+  border: 1px solid white;
+  border-radius: 30px;
+}
+.contactform button{
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  font-size: large;
+  height: 40px;
+ border-radius: 30px;
+  background-color: goldenrod;
+  margin-top: 10px;
+  transition: all ease 0.3s;
+}
+.contactform button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+/*  <!-- footer section --> */
+
+footer {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: #131923;
+
+}
+footer h3{
+  font-size: medium;
+}
+footer p{
+  font-size: small;
+}
+
+/* media queries for tablte */
+
+
+@media screen and (max-width: 770px) {
+
+    .navbar{
+        padding: 0px 50px 0px 50px;
+    }
+  .navbar ul  {
+   display: block;
+   position: absolute;
+   right: -50%;
+   top: 70px;
+   width: 50%;
+   height:40vh;
+   border: 1px solid gold;
+   border-bottom-left-radius: 20px;
+   border-top-left-radius: 20px;
+   background-color: rgba(0, 0, 0, 0.693);
+    text-align: center;
+    line-height: 50px;
+    padding-top: 40px;
+    z-index: 99999;
+    /* position: relative; */
+    transition: all ease 0.5s;
+  }
+    .navbar #open{
+    display: flex;
+    margin-left: 100px;
+    font-size: 1.8rem;
+}
+.navbar #close{
+    /* display: block; */
+    margin-left: 100px;
+    font-size: 1.8rem;
+} 
+
+
+  .mainsection {
+    flex-direction: column-reverse;
+    height: auto;
+    margin-top: 60px;
+    justify-content: center;
+  }
+
+  .mainsection .devpic {
+    height: 300px;
+    width: 300px;
+  }
+  .mainsection .myself {
+    padding-top: 0px;
+  }
+  .skillsection .skillbox {
+    height: 80vh;
+  }
+
+  .myprojectsection .allprojects {
+    height: 130vh;
+  }
+ .contactsection .mycontactinfo{
+  flex-direction: column-reverse;
+  height: 150vh;
+ }
+  .contactsection .mycontactinfo .myinfo {
+    height: 300px;
+    width: 400px;
+    /* background-color: darkgoldenrod; */
+  }
+
+
+}
+
+/* media queries for mobile small screen  */
+
+
+@media screen and (max-width: 425px) {
+  /* .navbar .logo {
+    margin-left: -100px;
+  }
+
+.navbar #open{
+    display: flex;
+    margin-left: 100px;
+    font-size: 1.8rem;
+}
+.navbar #close{
+    display: flex;
+    margin-left: 100px;
+    font-size: 1.8rem;
+} */
+
+  .mainsection {
+    height: auto;
+  }
+  .mainsection .devpic {
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+  }
+  .mainsection .myself {
+    width: 80%;
+    height: 300px;
+    /* margin-top: 40px; */
+  }
+  .mainsection .myself p {
+    font-size: small;
+  }
+  .mainsection .myself h1 {
+    font-size: 1.5rem;
+  }
+
+  .mainsection .myself p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .mainsection .myself button {
+    height: 30px;
+    width: 100px;
+    font-size: smaller;
+  }
+.skillsection .skillsheading {
+  text-align: center;
+  padding-top: 100px;
+}
+  .skillsection .skillbox {
+    height: 150vh;
+  }
+  .myprojectsection {
+    height: auto;
+    width: 100%;
+    /* background-color: cornflowerblue; */
+  }
+  .myprojectsection .allprojects {
+    height: 240vh;
+    background-color: black;
+  }
+
+.contactsection .mycontactinfo{
+  flex-direction: column-reverse;
+  height: 130vh;
+ }
+ .contactsection .mycontactinfo .myinfo {
+    height: 400px;
+    width: 400px;
+    /* background-color: darkgoldenrod; */
+    padding-left: 40px;
+  }
+
+ .contactsection .mycontactinfo .contactme {
+  height: 480px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.237);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: 1px solid wheat;
+}
+footer{
+  padding: 20px;
+}
+footer h3{
+  font-size: 15px;
+  font-weight: 500;
+}
+footer p{
+  font-size: small;
+}
+}
+
+
+
+
+
+
+/* === Dark Mode UI Upgrade === */
+
+body, html {
+  background-color: #0D1117;
+  color: #f0f0f0;
+}
+
+.navbar {
+  background-color: #1f1f1f;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.1);
+}
+
+.navbar ul li a {
+  color: #f0f0f0;
+}
+
+.navbar ul li a:hover {
+  color: #FFD700;
+}
+
+.navbar ul li a::after {
+  background-color: #FFD700;
+}
+
+button {
+  background-color: #FFD700;
+  color: #0f0f0f;
+  border: none;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.skillsection .skillbox .skill1 {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.myprojectsection .allprojects .projectbox .projectinfo {
+  background: linear-gradient(rgba(169, 169, 169, 0.8), #FFD700);
+}
+
+.contactsection .mycontactinfo .contactme {
+  background-color: #1f1f1f;
+  border: 1px solid #00c8ffd4;
+}
+
+.contactform input,
+.contactform textarea {
+  background-color: transparent;
+  color: #f0f0f0;
+  border: 1px solid #00c8ff98;
+}
+
+.contactform button {
+  background-color: #ffd900b7;
+  color: #000;
+}
+
+.contactform button:hover {
+  background-color: #f0f0f0;
+  color: rgb(198, 168, 0);
+}
+
+/* Optional highlight color */
+a:hover {
+  color: #00bcd4;
+}
+
+
+
+
+
+
+
+button:hover {
+  box-shadow: 0 0 15px #22C55E;
+  transform: translateY(-3px);
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .mainsection {
+    flex-direction: column-reverse;
+    padding-top: 80px;
+  }
+
+  .mainsection .devpic,
+  .mainsection .myself {
+    width: 80%;
+    text-align: center;
+  }
+
+  .skillsection .skillbox {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .myprojectsection .allprojects {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .contactsection .mycontactinfo {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .contactsection .mycontactinfo .myinfo,
+  .contactsection .mycontactinfo .contactme {
+    width: 90%;
+  }
+}
+
+.skillsection .skillbox .skill1 {
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.skillsection .skillbox .skill1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+  background-color: #1f1f1f; /* optional: darker hover background */
+}
+
+
+@keyframes headingBounce {
+  0%, 100% {
+    transform: translateY(0);
+    color: #FFD700;
+  }
+  50% {
+    transform: translateY(-5px);
+    color: #ffffff;
+  }
+}
+.skillsheading h1,
+.projects h1,
+.contactheading h1 {
+  animation: headingBounce 1.5s ease-in-out infinite;
+}
+
+.links i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #22C55E; /* modern green */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+  color: black;
+}
+
+.links i:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 12px #22C55E;
+}
+.contactform button {
+  background-color: #22C55E; /* Tailwind Green 500 */
+  color: black;
+  cursor: pointer;
+  border: 1px solid white;
+  font-size: large;
+  height: 40px;
+  border-radius: 30px;
+  transition: all ease 0.3s;
+}
+
+.contactform button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 12px #22C55E;
+}
+
+/* From Uiverse.io by jeremyssocial */ 
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+.loader{
+  height: 100%;
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99999999;
+}
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  width: 12em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #e33;
+}
+
+.control.minimize {
+  background-color: #ee0;
+}
+
+.control.maximize {
+  background-color: #0b0;
+}
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green; /* Cursor */
+  animation:
+    typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+/* From Uiverse.io by Nawsome */ 
+.wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.wheel,
+.hamster,
+.hamster div,
+.spoke {
+  position: absolute;
+}
+
+.wheel,
+.spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wheel {
+  background: radial-gradient(100% 100% at center,hsla(0,0%,60%,0) 47.8%,hsl(0,0%,60%) 48%);
+  z-index: 2;
+}
+
+.hamster {
+  animation: hamster var(--dur) ease-in-out infinite;
+  top: 50%;
+  left: calc(50% - 3.5em);
+  width: 7em;
+  height: 3.75em;
+  transform: rotate(4deg) translate(-0.8em,1.85em);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
+
+.hamster__head {
+  animation: hamsterHead var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,55%);
+  border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+  box-shadow: 0 -0.25em 0 hsl(30,90%,80%) inset,
+		0.75em -1.55em 0 hsl(30,90%,90%) inset;
+  top: 0;
+  left: -2em;
+  width: 2.75em;
+  height: 2.5em;
+  transform-origin: 100% 50%;
+}
+
+.hamster__ear {
+  animation: hamsterEar var(--dur) ease-in-out infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 50%;
+  box-shadow: -0.25em 0 hsl(30,90%,55%) inset;
+  top: -0.25em;
+  right: -0.25em;
+  width: 0.75em;
+  height: 0.75em;
+  transform-origin: 50% 75%;
+}
+
+.hamster__eye {
+  animation: hamsterEye var(--dur) linear infinite;
+  background-color: hsl(0,0%,0%);
+  border-radius: 50%;
+  top: 0.375em;
+  left: 1.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.hamster__nose {
+  background: hsl(0,90%,75%);
+  border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+  top: 0.75em;
+  left: 0;
+  width: 0.2em;
+  height: 0.25em;
+}
+
+.hamster__body {
+  animation: hamsterBody var(--dur) ease-in-out infinite;
+  background: hsl(30,90%,90%);
+  border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+  box-shadow: 0.1em 0.75em 0 hsl(30,90%,55%) inset,
+		0.15em -0.5em 0 hsl(30,90%,80%) inset;
+  top: 0.25em;
+  left: 2em;
+  width: 4.5em;
+  height: 3em;
+  transform-origin: 17% 50%;
+  transform-style: preserve-3d;
+}
+
+.hamster__limb--fr,
+.hamster__limb--fl {
+  clip-path: polygon(0 0,100% 0,70% 80%,60% 100%,0% 100%,40% 80%);
+  top: 2em;
+  left: 0.5em;
+  width: 1em;
+  height: 1.5em;
+  transform-origin: 50% 0;
+}
+
+.hamster__limb--fr {
+  animation: hamsterFRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 80%,hsl(0,90%,75%) 80%);
+  transform: rotate(15deg) translateZ(-1px);
+}
+
+.hamster__limb--fl {
+  animation: hamsterFLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 80%,hsl(0,90%,85%) 80%);
+  transform: rotate(15deg);
+}
+
+.hamster__limb--br,
+.hamster__limb--bl {
+  border-radius: 0.75em 0.75em 0 0;
+  clip-path: polygon(0 0,100% 0,100% 30%,70% 90%,70% 100%,30% 100%,40% 90%,0% 30%);
+  top: 1em;
+  left: 2.8em;
+  width: 1.5em;
+  height: 2.5em;
+  transform-origin: 50% 30%;
+}
+
+.hamster__limb--br {
+  animation: hamsterBRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,80%) 90%,hsl(0,90%,75%) 90%);
+  transform: rotate(-25deg) translateZ(-1px);
+}
+
+.hamster__limb--bl {
+  animation: hamsterBLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30,90%,90%) 90%,hsl(0,90%,85%) 90%);
+  transform: rotate(-25deg);
+}
+
+.hamster__tail {
+  animation: hamsterTail var(--dur) linear infinite;
+  background: hsl(0,90%,85%);
+  border-radius: 0.25em 50% 50% 0.25em;
+  box-shadow: 0 -0.2em 0 hsl(0,90%,75%) inset;
+  top: 1.5em;
+  right: -0.5em;
+  width: 1em;
+  height: 0.5em;
+  transform: rotate(30deg) translateZ(-1px);
+  transform-origin: 0.25em 0.25em;
+}
+
+.spoke {
+  animation: spoke var(--dur) linear infinite;
+  background: radial-gradient(100% 100% at center,hsl(0,0%,60%) 4.8%,hsla(0,0%,60%,0) 5%),
+		linear-gradient(hsla(0,0%,55%,0) 46.9%,hsl(0,0%,65%) 47% 52.9%,hsla(0,0%,65%,0) 53%) 50% 50% / 99% 99% no-repeat;
+}
+
+/* Animations */
+@keyframes hamster {
+  from, to {
+    transform: rotate(4deg) translate(-0.8em,1.85em);
+  }
+
+  50% {
+    transform: rotate(0) translate(-0.8em,1.85em);
+  }
+}
+
+@keyframes hamsterHead {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes hamsterEye {
+  from, 90%, to {
+    transform: scaleY(1);
+  }
+
+  95% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes hamsterEar {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes hamsterBody {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(0);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes hamsterFRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(50deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-30deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterFLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-30deg);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes hamsterBRLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(-60deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(20deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterBLLimb {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(20deg);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes hamsterTail {
+  from, 25%, 50%, 75%, to {
+    transform: rotate(30deg) translateZ(-1px);
+  }
+
+  12.5%, 37.5%, 62.5%, 87.5% {
+    transform: rotate(10deg) translateZ(-1px);
+  }
+}
+
+@keyframes spoke {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-1turn);
+  }
+}
